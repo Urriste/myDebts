@@ -1,0 +1,21 @@
+[debug] [2022-04-19T19:45:29.592Z] ----------------------------------------------------------------------
+[debug] [2022-04-19T19:45:29.594Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ICBC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-04-19T19:45:29.594Z] CLI Version:   10.6.0
+[debug] [2022-04-19T19:45:29.594Z] Platform:      win32
+[debug] [2022-04-19T19:45:29.594Z] Node Version:  v16.14.2
+[debug] [2022-04-19T19:45:29.595Z] Time:          Tue Apr 19 2022 16:45:29 GMT-0300 (hora estándar de Argentina)
+[debug] [2022-04-19T19:45:29.595Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-19T19:45:29.604Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-19T19:45:29.604Z] > authorizing via signed-in user (lukeu2002@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ICBC\Desktop\Dev\Frontend\myDebts
+
