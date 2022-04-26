@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div class="home-container">
+
+    <img src="../../../assets/img/menu-btn.png" alt="menu btn" class="menu" (click)="isMenuOpen = true">
+    <app-menu *ngIf="isMenuOpen"></app-menu>
+
+    <div class="welcome-container">
+
+        <h2>¡Hola {{ name && name}} Lucas!</h2>
+        <p class="paragraph">Empezá a registrar tus deudas</p>
+
+    </div>
+
+    <div class="debts-container">
+
+            <p *ngIf="!debts" class="no-debts">Todavía no tenés deudas cargadas</p>
+      
+            <p *ngIf="debts" class="no-debts">Tenés deudas cargadas</p>
+
+    </div>
+
+</div>

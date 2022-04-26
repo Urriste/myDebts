@@ -1,0 +1,27 @@
+.home-container {
+    width: 100%;
+    height: 100vh;
+    padding: 25px;
+
+    .welcome-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 150px 0;
+    }
+
+    .debts-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .no-debts {
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.475);
+        }
+    }
+}
