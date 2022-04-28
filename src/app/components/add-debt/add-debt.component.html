@@ -1,1 +1,35 @@
-<p>add-debt works!</p>
+<div class="add-container">
+
+    <img src="../../../assets/img/menu-btn.png" alt="menu btn" class="menu" (click)="isMenuOpen = true">
+    <app-menu *ngIf="isMenuOpen"></app-menu>
+
+    <div class="add-body">
+
+        <h3 class="add-title">Agregar una nueva deuda</h3>
+        
+        <form class="form" class="form" [formGroup]="dataForm">
+
+            <label for="">
+                Nombre
+                <input type="text" placeholder="HBO+" formControlName="name">
+            </label>
+
+            <label for="">
+                Monto
+                $<input type="number" placeholder="650" formControlName="amount">
+            </label>
+
+            <label for="">
+                Fecha
+                <input type="number" placeholder="3" formControlName="date">
+            </label>
+            
+            <button class="add-btn" (click)="submit()">Agregar</button>
+
+        </form>
+
+    </div>
+
+    
+
+</div>
