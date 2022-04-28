@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from 'src/app/services/app.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appService: AppService) { }
+
+  emitMenuState() {
+
+    this.appService.emitMenuState.emit(false);
+
+  }
 
   ngOnInit(): void {
   }

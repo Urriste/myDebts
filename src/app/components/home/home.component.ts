@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { getAuth } from 'firebase/auth';
+import { AppService } from 'src/app/services/app.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  auth: any = getAuth();
+  name: String = "";
+  debts!: any[];
+  isMenuOpen: boolean = false;
+
+
+  constructor(private appService: AppService) { }
 
   ngOnInit(): void {
+    if (this.auth.currentUser) {
+      console.log(this.auth.currentUser)
+      this.name = this.auth.currentUser.displayName;
+    }
+
+    this.appService.emitMenuState.subscribe((res: boolean) => {
+      this.isMenuOpen = res;
+    })
+
   }
+
 
 }

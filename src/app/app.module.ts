@@ -12,6 +12,7 @@ import { ErrorComponent } from './components/error/error.component';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { ReactiveFormsModule } from '@angular/forms';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCV8nx2wGTa_EmpG7DF11897TG8X-v1Ep8",
@@ -37,7 +38,9 @@ const app = initializeApp(firebaseConfig);
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

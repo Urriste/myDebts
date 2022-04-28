@@ -1,1 +1,22 @@
-<p>menu works!</p>
+<div class="menu-container">
+    <div class="top-menu">
+        
+        <img src="../../../assets/img/menu-btn.png" alt="menu btn" class="close-btn" (click)="emitMenuState()">
+    
+    </div>
+
+    <div class="menu-content">
+
+      <div class="menu-item">
+          <img src="../../../assets/img/item.png" alt="item" class="menu-icon">
+          <a routerLink="/home" class="menu-link">Inicio</a>
+      </div>  
+
+      <div class="menu-item">
+            <img src="../../../assets/img/item.png" alt="item" class="menu-icon">
+            <a routerLink="/add" class="menu-link">Agregar deuda</a>
+      </div>  
+
+    </div>
+
+</div>

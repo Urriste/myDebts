@@ -1,0 +1,55 @@
+@import "src/styles.scss";
+
+.menu-container {
+    background-color: $green;
+    width: 225px;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .top-menu {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+
+        .close-btn {
+            margin: 25px 15px 0 0;
+        }
+
+    }
+
+    .menu-content {
+        display: flex;
+        flex-direction: column;
+        margin: 45px 0 0 20px;
+
+        .menu-item {
+
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+
+            .menu-icon {
+                width: 13px;
+                height: 13px;
+                margin-right: 5px;
+            }
+
+            .menu-link {
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+
+        }
+
+
+
+
+
+    }
+
+}
