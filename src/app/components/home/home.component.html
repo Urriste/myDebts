@@ -5,7 +5,7 @@
 
     <div class="welcome-container">
 
-        <h2>¡Hola {{ name && name}} Lucas!</h2>
+        <h2>¡Hola {{ name ? name : "Usuario"}}!</h2>
         <p class="paragraph">Empezá a registrar tus deudas</p>
 
     </div>
@@ -14,7 +14,14 @@
 
             <p *ngIf="!debts" class="no-debts">Todavía no tenés deudas cargadas</p>
       
-            <p *ngIf="debts" class="no-debts">Tenés deudas cargadas</p>
+            <ng-container *ngIf="debts" > 
+                <p>Total: ${{total}}</p>
+                <ng-container *ngFor="let debt of debts">
+                   
+                    <app-debt [debt]="debt"></app-debt>
+
+                </ng-container>
+            </ng-container>
 
     </div>
 

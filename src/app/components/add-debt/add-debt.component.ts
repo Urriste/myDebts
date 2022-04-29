@@ -16,6 +16,7 @@ export class AddDebtComponent implements OnInit {
   isMenuOpen: boolean = false;
   dataForm!: FormGroup;
   auth: any = getAuth();
+  isAdded: boolean = false;
 
 
 
@@ -43,6 +44,14 @@ export class AddDebtComponent implements OnInit {
       name: debt.name,
       amount: debt.amount,
       date: debt.date,
+    }).then(() => {
+      this.isAdded = true;
+      this.dataForm.reset();
+
+      setTimeout(() => {
+        this.isAdded = false;
+      }, 1500)
+
     })
 
 
@@ -56,6 +65,7 @@ export class AddDebtComponent implements OnInit {
 
     if (this.auth.currentUser) {
       userName = this.auth.currentUser.email;
+      userName = userName.split("@")[0]
     }
 
     if (this.dataForm.valid) {
