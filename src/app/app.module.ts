@@ -13,6 +13,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { ReactiveFormsModule } from '@angular/forms';
+import { DebtComponent } from './components/debt/debt.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCV8nx2wGTa_EmpG7DF11897TG8X-v1Ep8",
@@ -34,7 +35,8 @@ const app = initializeApp(firebaseConfig);
     LoginComponent,
     AddDebtComponent,
     MenuComponent,
-    ErrorComponent
+    ErrorComponent,
+    DebtComponent
   ],
   imports: [
     BrowserModule,

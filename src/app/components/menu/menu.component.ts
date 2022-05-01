@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
+import { getAuth, signOut } from 'firebase/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +10,9 @@ import { AppService } from 'src/app/services/app.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private appService: AppService) { }
+
+
+  constructor(private appService: AppService, private router: Router) { }
 
   emitMenuState() {
 
@@ -17,6 +21,13 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  logout() {
+    let auth: any = getAuth();
+    signOut(auth).then(() => {
+      this.router.navigate(["/login"])
+    })
   }
 
 }
